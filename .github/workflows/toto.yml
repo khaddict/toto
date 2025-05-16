@@ -1,12 +1,12 @@
-name: Toto toutes les 5 minutes
+name: Test Cron Schedule
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: "*/5 * * * *"  # Runs every 5 minutes for testing
 
 jobs:
-  echo_job:
+  test-cron:
     runs-on: ubuntu-latest
     steps:
-      - name: toto
-        run: echo "toto"
+      - run: echo "Cron job ran successfully!"
