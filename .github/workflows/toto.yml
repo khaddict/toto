@@ -1,0 +1,12 @@
+name: Toto toutes les 5 minutes
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  echo_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: toto
+        run: echo "toto"
